@@ -1,0 +1,18 @@
+<h3>Lista de Frutas</h3>
+
+@if (lista.length === 0) {
+    <p>Nenhuma fruta cadastrada</p>
+}
+<ul>
+    @for (l of lista; track $index) {
+        <li>
+            {{ l }}
+            <button (click)="remover(l)">Remover</button>
+            <button (click)="concluir(l)">Concluir</button>
+        </li>
+    }
+</ul>
+
+<hr>
+
+<button routerLink="/cadastrar">Voltar</button>
